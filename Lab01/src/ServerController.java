@@ -11,7 +11,6 @@ public class ServerController {
     public ConcurrentLinkedQueue<String> queuedMessages;
 
     private ServerSocket serverSocket;
-    private ServerController local = this;
 
     /**
      * Constructor
@@ -57,8 +56,8 @@ public class ServerController {
                             sleep(100);
                         } catch (InterruptedException ie) {
                             System.out.println("Failed sleep:\n" + ie);
-                            continue;
                         }
+                        continue;
                     }
 
                     //Otherwise queue has stuff to read
@@ -76,7 +75,10 @@ public class ServerController {
      * @param message Message to handle
      */
     private synchronized void handleMessage (String message) {
-        for (ServerConnection sc : connections)
+        System.out.println("Pinging new message :: " + connections.size() + " connections");
+        for (ServerConnection sc : connections) {
+            System.out.println("Sending " + message + " to " +  sc.toString());
             sc.sendMessage(message);
+        }
     }
 }

@@ -16,6 +16,8 @@ public class ServerConnection {
         this.localSocket = socket;
         this.parent = parent;
 
+        System.out.println("Generated new connection: " + this.toString());
+
         try {
             socketInboundReader = new BufferedReader
                     (new InputStreamReader(this.localSocket.getInputStream()));
@@ -31,6 +33,7 @@ public class ServerConnection {
                     try {
                         String incoming = socketInboundReader.readLine();
                         parent.queuedMessages.add(incoming);
+                        System.out.println("Connection added new message: " + incoming);
                     } catch (IOException ioe) {
                         System.out.println("Exception occurred during inbound reading:\n" + ioe);
                     }
@@ -43,6 +46,7 @@ public class ServerConnection {
 
 
     public void sendMessage (String message) {
+        System.out.println("Received send request :: " + message + " :: " + this.toString());
         socketOutboundWriter.println(message);
     }
 }

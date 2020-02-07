@@ -13,7 +13,9 @@ public class main {
 
             if (resp.equals("s")){
                 try {
+                    System.out.println("Starting server");
                     new ServerController(1234);
+                    break;
                 } catch (Exception e) {
                     System.out.println("Failed to create server!\n" + e);
                     continue;
@@ -42,6 +44,11 @@ public class main {
             if (resp.equals("x")) break;
 
             System.out.println("Invalid, try again");
+        }
+
+        while (true){
+            System.out.println("type 'exit' at any time to quit");
+            if (s.nextLine().equals("exit")) break;
         }
     }
 }

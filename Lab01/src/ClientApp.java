@@ -1,10 +1,13 @@
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Scanner;
 
 public class ClientApp {
+
+    private boolean isRunning;
 
     public ClientApp () {
         int portNumber = 1234;
@@ -19,14 +22,28 @@ public class ClientApp {
 
             //Spin up Scanner for input
             Scanner commandLineReader = new Scanner(System.in);
-            String userInput;
 
-            //Continually act as a chat program
+            Thread inbound = new Thread () {
+                public void run () {
+                    while (true){
+                        try {
+                            System.out.println(socketInput.readLine());
+                        } catch (IOException ioe) {
+                            System.out.println("Exception occurred while receiving an inbound message:\n" + ioe);
+                        }
+                    }
+                }
+            };
+            inbound.setDaemon(true);
+            inbound.start();
+
             while (true) {
-                userInput = commandLineReader.nextLine();
-                socketOutput.println(userInput);
-                System.out.println("server sent back: " + socketInput.readLine());
+                String input = commandLineReader.nextLine();
+                if (input.equals("exit")) System.exit(0);
+
+                socketOutput.println(input);
             }
+
         } catch (Exception e) {
             System.out.println(e);
         }
