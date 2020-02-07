@@ -1,10 +1,7 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.net.InetAddress;
-import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Scanner;
 
 public class ServerApp  extends Thread{
 
@@ -17,25 +14,15 @@ public class ServerApp  extends Thread{
 
     @Override
     public void run() {
-        //        while (true){
         try {
-            //this.serverSocket = new ServerSocket(1234, 1, InetAddress.getLocalHost());
-            //this.serverSocket = new ServerSocket(1234);
+            BufferedReader socketInboundReader = new BufferedReader(new InputStreamReader(this.serverSocket.getInputStream()));
+            PrintWriter socketOutboundWriter = new PrintWriter(this.serverSocket.getOutputStream(), true);
 
-            //System.out.println(serverSocket.accept());
-
-            //Socket client = serverSocket.accept();
-            BufferedReader in = new BufferedReader(new InputStreamReader(this.serverSocket.getInputStream()));
-            PrintWriter out = new PrintWriter(this.serverSocket.getOutputStream(), true);
-
-            String input;
-            Scanner scanner = new Scanner(System.in);
             while (true){
-
-                String s = in.readLine();
-                out.println("Echo:" + s);
-                System.out.println("user: saw " + s);
-                if (s.equals("done")){
+                String inboundData = socketInboundReader.readLine();
+                socketOutboundWriter.println("Echo:" + inboundData);
+                System.out.println("user: saw " + inboundData);
+                if (inboundData.equals("done")){
                     break;
                 }
 
@@ -49,6 +36,5 @@ public class ServerApp  extends Thread{
         } catch (Exception e) {
             System.out.println(e);
         }
-//        }
     }
 }

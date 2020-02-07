@@ -1,5 +1,4 @@
 import java.net.ServerSocket;
-import java.net.Socket;
 import java.util.Scanner;
 
 public class main {
@@ -12,11 +11,12 @@ public class main {
             String resp = s.nextLine();
 
             if (resp.equals("s")){
-                try(ServerSocket serverSocket = new ServerSocket(1234)){
-                    System.out.println("starting server...");
-                    new ServerApp(serverSocket.accept()).start();
-                    s.nextLine();
-                    break;
+                try(
+                        ServerSocket serverSocket = new ServerSocket(1234)){
+                        System.out.println("starting server...");
+                        new ServerApp(serverSocket.accept()).start();
+                        s.nextLine();
+                        break;
 
                 }catch (Exception e){
                     e.printStackTrace();

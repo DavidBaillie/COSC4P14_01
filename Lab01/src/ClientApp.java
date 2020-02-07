@@ -1,5 +1,3 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Scanner;
@@ -9,27 +7,16 @@ public class ClientApp {
     public ClientApp () {
         int portNumber = 1234;
         try {
+            //Spin up socket for connection, PrintWriter for sending data through socket
             Socket clientSocket = new Socket("localhost", portNumber);
-            PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
-            BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-            BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
+            PrintWriter socketOutput = new PrintWriter(clientSocket.getOutputStream(), true);
 
-            String input;
-
-//            while ((input = stdIn.readLine()) != null){
-            //              out.println(input);
-            //            System.out.println(input);
-            //     }
-
-
-            Scanner scan = new Scanner(System.in);
-            String s;
+            Scanner commandLineReader = new Scanner(System.in);
+            String userInput;
             while (true) {
-
-                s = scan.nextLine();
-                out.println(s);
-                //out.flush();
-                System.out.println("server sent back: " + s);
+                userInput = commandLineReader.nextLine();
+                socketOutput.println(userInput);
+                System.out.println("server sent back: " + userInput);
             }
         } catch (Exception e) {
             System.out.println(e);
