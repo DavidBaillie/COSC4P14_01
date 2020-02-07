@@ -20,7 +20,8 @@ public class ServerApp  extends Thread{
 
             while (true){
                 String inboundData = socketInboundReader.readLine();
-                socketOutboundWriter.println("Echo:" + inboundData);
+                //socketOutboundWriter.println("Echo:" + inboundData);
+                socketOutboundWriter.println("Hello there youngling...");
                 System.out.println("user: saw " + inboundData);
                 if (inboundData.equals("done")){
                     break;
