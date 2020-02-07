@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.util.Scanner;
 
@@ -11,6 +12,14 @@ public class main {
             String resp = s.nextLine();
 
             if (resp.equals("s")){
+                try {
+                    new ServerController(1234);
+                } catch (Exception e) {
+                    System.out.println("Failed to create server!\n" + e);
+                    continue;
+                }
+
+                /*
                 try(
                         ServerSocket serverSocket = new ServerSocket(1234)){
                         System.out.println("starting server...");
@@ -21,6 +30,7 @@ public class main {
                 }catch (Exception e){
                     e.printStackTrace();
                 }
+                */
             }
 
             if (resp.equals("c")){

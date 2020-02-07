@@ -7,11 +7,17 @@ public class ServerApp  extends Thread{
 
     private Socket serverSocket;
 
-
+    /**
+     * Constructor
+     * @param socket Socket for thread to use on connection
+     */
     public ServerApp(Socket socket) {
         this.serverSocket = socket;
     }
 
+    /**
+     * Threaded run method
+     */
     @Override
     public void run() {
         try {
