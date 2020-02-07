@@ -1,32 +1,47 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.net.InetAddress;
-import java.net.ServerSocket;
 import java.net.Socket;
 
-public class ServerApp {
+public class ServerApp  extends Thread{
 
-    private ServerSocket serverSocket;
+    private Socket serverSocket;
 
-    public ServerApp() {
-        while (true){
-            try {
-                this.serverSocket = new ServerSocket(1234, 1, InetAddress.getLocalHost());
-                System.out.println(serverSocket.getInetAddress());
-                Socket client = serverSocket.accept();
-                PrintWriter out = new PrintWriter(client.getOutputStream(), true);
-                BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
+    /**
+     * Constructor
+     * @param socket Socket for thread to use on connection
+     */
+    public ServerApp(Socket socket) {
+        this.serverSocket = socket;
+    }
 
-                String input;
+    /**
+     * Threaded run method
+     */
+    @Override
+    public void run() {
+        try {
+            BufferedReader socketInboundReader = new BufferedReader(new InputStreamReader(this.serverSocket.getInputStream()));
+            PrintWriter socketOutboundWriter = new PrintWriter(this.serverSocket.getOutputStream(), true);
 
-                while (true){
-                    String s = in.readLine();
-                    out.println("Echo: " + s);
+            while (true){
+                String inboundData = socketInboundReader.readLine();
+                //socketOutboundWriter.println("Echo:" + inboundData);
+                socketOutboundWriter.println("Hello there youngling...");
+                System.out.println("user: saw " + inboundData);
+                if (inboundData.equals("done")){
+                    break;
                 }
-            } catch (Exception e) {
-                System.out.println(e);
+
+                try {
+                    Thread.sleep(1500);
+                }catch (InterruptedException e){
+                    System.out.println("Thread was interrupted ");
+                }
+
             }
+        } catch (Exception e) {
+            System.out.println(e);
         }
     }
 }
