@@ -62,7 +62,7 @@ public class Server {
       System.out.println("Connected: " + socket);
       try {
         Scanner in = new Scanner(socket.getInputStream());
-        PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+        PrintWriter outWriter = new PrintWriter(socket.getOutputStream(), true);
         while (in.hasNextLine()) {
           String line;
           if (!userExists()) {
@@ -73,9 +73,14 @@ public class Server {
           } else {
             int incomingPort = socket.getPort();
             String username = getUser(incomingPort);
-            System.out.println(username + " says: " + in.nextLine());
+            line = in.nextLine();
+            String broadcast = username + " says: " + line;
+            System.out.println(broadcast);
+            outWriter.println(broadcast);
           }
         }
+
+
       } catch (Exception e) {
         System.out.println(e);
       } finally {
@@ -85,7 +90,8 @@ public class Server {
         }
         String userLeftChat = getUser(socket.getPort());
         removeUser(socket.getPort());
-        System.out.println(userLeftChat + " left chatroom");
+        String broadcast = userLeftChat + " left chatroom";
+        System.out.println(broadcast);
       }
     }
 
