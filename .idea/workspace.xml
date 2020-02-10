@@ -2,8 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dfe548f-80e2-465d-93df-986955f8308c" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab01/out/production/COSC4P14_01/ClientApp$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab01/out/production/COSC4P14_01/ClientApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab01/out/production/COSC4P14_01/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab01/out/production/COSC4P14_01/ServerApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab01/out/production/COSC4P14_01/ServerConnection$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab01/out/production/COSC4P14_01/ServerConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab01/out/production/COSC4P14_01/ServerController$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab01/out/production/COSC4P14_01/ServerController$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab01/out/production/COSC4P14_01/ServerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab01/out/production/COSC4P14_01/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab01/out/production/Lab01/ClientApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab01/out/production/Lab01/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab01/out/production/Lab01/ServerApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab01/out/production/Lab01/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab01/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab01/src/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab01/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab01/src/Server.java" afterDir="false" />
+>>>>>>> 145cd16906047d31b7ff1f68f72bd0db9b60c145
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,12 +46,16 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="width" value="1432" />
     <option name="height" value="1407" />
   </component>
   <component name="ProjectId" id="1XV9wpUQV3vVCxPI2buBwIyWgAF" />
+=======
+  <component name="ProjectId" id="1XaJzTrUUaTxnSh4Z4pRz5A3d5Y" />
+>>>>>>> 145cd16906047d31b7ff1f68f72bd0db9b60c145
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -143,10 +167,41 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< HEAD
     <state x="570" y="346" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1581120657014">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="570" y="346" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1440.900/-1920.-137.1920.1080@0.0.1440.900" timestamp="1581120657014" />
+=======
+    <state x="570" y="346" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1581278746236">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="570" y="346" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1440.900/-1920.-137.1920.1080@0.0.1440.900" timestamp="1581278746236" />
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581278662502">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/-1920.-137.1920.1080@0.0.1440.900" timestamp="1581278662502" />
+    <state width="1238" height="124" key="GridCell.Tab.0.bottom" timestamp="1581305446834">
+      <screen x="0" y="23" width="1280" height="709" />
+    </state>
+    <state width="1238" height="124" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1581299954918" />
+    <state width="1238" height="124" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1581305446834" />
+    <state width="1238" height="124" key="GridCell.Tab.0.center" timestamp="1581305446832">
+      <screen x="0" y="23" width="1280" height="709" />
+    </state>
+    <state width="1238" height="124" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1581299954916" />
+    <state width="1238" height="124" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1581305446832" />
+    <state width="1238" height="124" key="GridCell.Tab.0.left" timestamp="1581305446832">
+      <screen x="0" y="23" width="1280" height="709" />
+    </state>
+    <state width="1238" height="124" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1581299954914" />
+    <state width="1238" height="124" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1581305446832" />
+    <state width="1238" height="124" key="GridCell.Tab.0.right" timestamp="1581305446833">
+      <screen x="0" y="23" width="1280" height="709" />
+    </state>
+    <state width="1238" height="124" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1581299954917" />
+    <state width="1238" height="124" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1581305446833" />
+>>>>>>> 145cd16906047d31b7ff1f68f72bd0db9b60c145
   </component>
   <component name="masterDetails">
     <states>
