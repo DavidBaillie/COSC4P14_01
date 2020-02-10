@@ -8,11 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7b79ae57-9189-4c5f-a21f-e49135957355" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab01/GeneralData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab01/GeneralData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab01/ServerConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab01/ServerConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab01/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab01/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneralData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +70,7 @@
       <workItem from="1580758304308" duration="22000" />
       <workItem from="1580758773047" duration="4530000" />
       <workItem from="1581346820774" duration="9004000" />
+      <workItem from="1581360314476" duration="291000" />
     </task>
     <servers />
   </component>
@@ -114,10 +110,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1581359915318" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1581347036444">
+    <state x="163" y="0" key="SettingsEditor" timestamp="1581361677728">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1581347036444" />
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1581361677728" />
     <state x="384" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1580758837947">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
