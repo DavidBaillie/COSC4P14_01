@@ -108,7 +108,6 @@ public class ServerConnection {
     private void parseMessage (String message) {
         String[] parsedMessage = message.split(GeneralData.DELIMITER);
 
-        //System.out.println("Received message: " + message + "\n1) " + parsedMessage[0] + "\n2) " + parsedMessage[1] + "\n3) " + parsedMessage[3]);
         System.out.println("Received message: " + message);
 
         //If the message is in the wrong format, do nothing
