@@ -7,8 +7,8 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class ServerController {
 
-    private List<ServerConnection> connections;
-    public ConcurrentLinkedQueue<String> queuedMessages;
+    public List<ServerConnection> connections;
+    public ConcurrentLinkedQueue<String[]> queuedMessages;
 
     private ServerSocket serverSocket;
 
@@ -46,7 +46,7 @@ public class ServerController {
         inboundConnections.setDaemon(true); //Kill thread when main process ends
         inboundConnections.start();         //Start thread
 
-
+        //Anonymous thread used to continually read from the message queue and send to clients
         Thread queuedMessageReader = new Thread() {
             public void run() {
                 while (true) {
@@ -66,19 +66,21 @@ public class ServerController {
 
             }
         };
-        queuedMessageReader.setDaemon(true);
-        queuedMessageReader.start();
+        queuedMessageReader.setDaemon(true);    //Kill thread when main dies
+        queuedMessageReader.start();            //Start thread
     }
 
     /**
      * Takes a queued message from the pool of inbound messages and responds to it
      * @param message Message to handle
      */
-    private synchronized void handleMessage (String message) {
-        System.out.println("Pinging new message :: " + connections.size() + " connections");
+    private synchronized void handleMessage (String[] message) {
         for (ServerConnection sc : connections) {
-            System.out.println("Sending " + message + " to " +  sc.toString());
-            sc.sendMessage(message);
+            if (sc.localRoomName.equals(message[0])){
+                System.out.println("Sending message to " + message[1] + "\n" +
+                        sc.localRoomName + "/" + message[0]);
+                sc.sendMessage(message[1] + ": " + message[2]);
+            }
         }
     }
 }
