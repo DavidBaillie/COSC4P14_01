@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e1752941-a468-4396-92be-f0c30ac707b7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/Lab01/ClientApp$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Lab01/GeneralData.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Lab01/META-INF/Lab01.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Lab01/ServerConnection$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Lab01/ServerConnection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Lab01/ServerController$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Lab01/ServerController$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Lab01/ServerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Lab01/UserData.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GeneralData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab01_jar/Lab01.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab01_jar/Lab01.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab01/ClientApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab01/ClientApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab01/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab01/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Old/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Old/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Old/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="220" y="110" width="1060" height="469" key="ShowDiffWithBranchDialog" timestamp="1581372428291">
+      <screen x="0" y="23" width="1280" height="709" />
+    </state>
+    <state x="220" y="110" width="1060" height="469" key="ShowDiffWithBranchDialog/0.23.1280.709@0.23.1280.709" timestamp="1581372428291" />
+  </component>
+</project>
