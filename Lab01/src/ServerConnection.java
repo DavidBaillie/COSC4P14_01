@@ -128,6 +128,8 @@ public class ServerConnection {
                     parsedMessage[i] : (parsedMessage[i] + GeneralData.DELIMITER);
         }
 
+
+
         //Load the rebuilt data into a new array
         parsedMessage = new String[] {roomName, username, pMessage};
 
@@ -156,6 +158,8 @@ public class ServerConnection {
             closeConnection();
             return;
         }
+
+        parsedMessage[2] = GeneralData.commandReplacemer(parsedMessage[2]);
 
         //Default message, just log it
         parent.queuedMessages.add(parsedMessage);
