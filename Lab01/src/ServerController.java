@@ -24,6 +24,7 @@ public class ServerController {
             serverSocket = new ServerSocket(port);
         } catch (IOException ioe) {
             System.out.println("Server failed to open socket on part: \n" + ioe);
+            return;
         }
 
         //Create anonymous class on Thread that tries to accept any new connection

@@ -3,6 +3,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.net.SocketException;
+import java.net.UnknownHostException;
 import java.util.Scanner;
 
 public class ClientApp {
@@ -13,8 +15,27 @@ public class ClientApp {
     public ClientApp () {
         int portNumber = 1234;
         try {
-            //Spin up socket for connection
-            Socket clientSocket = new Socket("localhost", portNumber);
+            String ip;
+            Socket clientSocket;
+
+            //Grab a valid server IP/Host to connect to
+            while (true){
+                try {
+                    System.out.println("Please enter your ip (or localhost)");
+                    ip = new Scanner(System.in).nextLine();
+                    clientSocket = new Socket(ip, portNumber);
+                    break;
+                } catch (SocketException se) {
+                    System.out.println("Invalid IP, please try again");
+                } catch (UnknownHostException uhe) {
+                    System.out.println("Invalid IP, please try again");
+                } catch (Exception e) {
+                    System.out.println("Invalid IP, please try again");
+                }
+            }
+
+            //Connection made, log and continue
+            System.out.println("Connection established...");
             //Used to send strings to the server
             socketOutput = new PrintWriter(clientSocket.getOutputStream(), true);
             //Used to receive strings from the server
