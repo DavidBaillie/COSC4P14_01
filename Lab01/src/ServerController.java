@@ -83,4 +83,10 @@ public class ServerController {
             }
         }
     }
+
+
+    public void sendDisconnectMessage (String name) {
+        for (ServerConnection conn : connections)
+            conn.sendMessage(name + " has left");
+    }
 }

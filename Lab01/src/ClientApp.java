@@ -59,6 +59,12 @@ public class ClientApp {
      * @param message Message received
      */
     private void clientReceivedMessage (String message) {
+        //
+        if (message == null) {
+            System.out.println("Closing connection...");
+            System.exit(0);
+        }
+
         //Received command to change room name
         if (message.startsWith("/cr")){
             UserData.roomName = message.substring(3);

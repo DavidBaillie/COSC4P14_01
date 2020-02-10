@@ -62,6 +62,7 @@ public class ServerConnection {
                     //Close the connection if we hit a socket exception
                     }catch (SocketException se) {
                         System.out.println("SocketException Occurred: " + ServerConnection.this.toString());
+                        parent.sendDisconnectMessage(localUsername);
                         closeConnection();
                         break;
 
