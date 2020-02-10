@@ -12,10 +12,7 @@ public class main {
     public static void main(String[] args) {
         //Grab Scanner for command line reading
         Scanner s = new Scanner(System.in);
-
-        //Ask the user for a name
-        UserData.requestUsername();
-
+        
         //Loop forever until the user chooses the correct info
         while (true){
             System.out.println("Server or client? s/c");
@@ -36,6 +33,7 @@ public class main {
             //User asked to be a client
             if (resp.equals("c")){
                 try {
+                    UserData.requestUsername();
                     System.out.println("Starting client...");
                     new ClientApp();
                     UserData.roomName = GeneralData.DEFAULT_ROOM_NAME;
